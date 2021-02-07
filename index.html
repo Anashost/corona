@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corona Netherlands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="calcTime.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+<div class="header">
+
+    <div class="title">
+        <span id="titlex" >احصائيات كورونا في العالم</span>
+        <img class="flag" src="https://pluspng.com/img-png/earth-png-1600.png">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="https://www.coronatracker.com/">Corona tracker</a></li>
+            <li><a href="https://www.rivm.nl/coronavirus-covid-19/actueel">RIVM</a></li>
+            <li><a href="https://www.worldometers.info/coronavirus/">worldometers</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+
+</div>
+<div class="white_space"></div>
+<div class="dateAndTime-Container">
+    <div class="digital-clock">00:00:00</div>
+    <div id="stats" class="live">مباشر</div>
+    <div class="date"></div>
+    <div type="button" class="lang-btn" id="lang-btn" onclick="changeLanguage()" >English</div>
+</div>
+
+<div id="all" class="all_content">
+    <div class="container">
+        <P  id="total_confirmed" class="total_confirmed pra">Total cases: </P>
+        <P class="total_deaths pra">Total Deaths: </P>
+        <P class="total_recovered pra">Total Recovered: </P>
+        <P class="new_confirmed pra">New Confirmed: </P>
+        <P  class="new_deaths demo pra">Today Deaths: </P>
+    </div>
+</div>
+
+<div id="all-ar" class="all_content">
+    <div class="container">
+        <P  class="total_confirmed pra">جميع الحالات : </P>
+        <P class="total_deaths pra">جميع الوفيات : </P>
+        <P class="total_recovered pra"> المتعافين : </P>
+        <P class="new_confirmed pra">حالات جديدة : </P>
+        <P  class="new_deaths demo pra">وفيات جديدة : </P>
+    </div>
+</div>
+<!--<select name="country" class="country-list">-->
+<!--    <option>select a country</option>-->
+<!--</select>-->
+<div class="white_space"></div>
+
+<h2 id="all-countries">جميع دول العالم</h2>
+<div class="search-table">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a country.." title="Type in a name">
+</div>
+
+<table id="myTable" class="table-data sortable">
+    <tr class="t-header">
+        <th class="t-country" id="myTable ">البلد</th>
+        <th id="t-cases" class="numeric-sort">جميع الحالات</th>
+        <th id="t-recovered">المتعافين</th>
+        <th id="t-deaths">الوفيات</th>
+    </tr>
+    </table>
+<div class="white_space"></div>
+
+<div class="footer">
+    <h3>Made by Anas Development 2020 v1.9</h3>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.menu-toggle').click(function () {
+            $('nav').toggleClass('active');
+        });
+
+    })
+</script>
+<script>
+    function myFunction() {
+        let input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

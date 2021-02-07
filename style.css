@@ -1,0 +1,376 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+}
+body {
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+    font-family: 'Droid Arabic Kufi', serif;
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1af;
+}
+
+h2{
+    text-align: center;
+    background: #fb8a60;
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1.3rem;
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    width: 100%;
+    background: #1abc9c;
+    color: white;
+}
+#all{
+    display: none;
+}
+.header .title {
+    float: right;
+    padding: 15px;
+}
+
+span {
+    padding-right: 20px;
+    font-size: 1.5rem
+}
+
+.flag {
+    width: 60px;
+    /*box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);*/
+    vertical-align: middle;
+}
+.flag-list{
+    width: 40px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.header nav {
+    position: absolute;
+    width: 30%;
+    height: calc(100vh - 50px);
+    top: 50px;
+    left: -100%;
+    transition: 0.5s;
+    background: #1abc9c;
+    text-align: center;
+
+}
+
+.header nav.active {
+    left: 0;
+}
+
+.header nav ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.header nav ul li {
+    list-style: none;
+    padding-top: 20px;
+    border-bottom: 1px rgba(255, 255, 255, 0.44) solid;
+}
+
+.header nav ul li a {
+    color: white;
+    line-height: 50px;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.header nav ul li a:hover {
+    color: #393939;
+    background: white;
+}
+
+.menu-toggle {
+    position: absolute;
+    color: white;
+    float: left;
+    line-height: 50px;
+    cursor: pointer;
+    display: block;
+    font-size: 2rem;
+    padding: 15px;
+}
+
+.dateAndTime-Container {
+
+    width: 45%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+}
+
+.digital-clock, .date, .live, .lang-btn {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1.3rem;
+    width: 110px;
+    background-color: #207dd2;
+    padding: 5px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.lang-btn{
+    cursor: pointer;
+    background: #6cf96b;
+    color: black;
+}
+.lang-btn:hover{
+    background: #1ff900;
+}
+
+.live {
+    background-color: crimson;
+}
+
+.container {
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+    margin: auto;
+    /*direction: rtl;*/
+    font-family: 'Droid Arabic Kufi', serif;
+    width: 40%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.pra {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #393939;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px auto 20px auto;
+}
+
+.container p:nth-child(1) {
+    background: #ffad48;
+}
+
+.container p:nth-child(2) {
+    background: #fb8079;
+}
+
+.container p:nth-child(3) {
+    background: #68f999;
+}
+
+.container p:nth-child(4) {
+    background: rgba(65, 188, 189, 0.69);
+}
+
+.search-table{
+    width: 50%;
+    margin: auto;
+}
+#myInput {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+@keyframes blinking {
+    0% {
+        background-color: #ff3d50;
+        color: #ddd;
+    }
+    100% {
+        background-color: #222291;
+        color: #fff;
+    }
+}
+
+.demo {
+    /* NAME | TIME | ITERATION */
+    animation: blinking 2s infinite;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #1abc9c;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.white_space {
+    margin-bottom: 100px;
+}
+table {
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+    font-family: 'Droid Arabic Kufi', serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.set-red{
+    color: red;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/*///////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .header {
+        padding: 0 5px;
+    }
+
+    .header nav {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .dateAndTime-Container {
+        width: 96%;
+        margin: auto;
+    }
+    span {
+        font-size: 1rem;
+        padding-right: 5px;
+    }
+
+    .flag {
+        width: 30px;
+        vertical-align: middle;
+    }
+
+    .menu-toggle {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    .digital-clock, .date, .live, .lang-btn {
+        font-size: 1rem;
+        width: 75px;
+    }
+
+    .header nav ul li a {
+        font-size: 1.3rem;
+    }
+
+    .pra {
+        width: 100%;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 10px;
+        margin: 20px auto 20px auto;
+    }
+    .white_space {
+        margin-bottom: 50px;
+    }
+    .search-table{
+        width: 90%;
+        margin: auto;
+    }
+    #myInput {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+    table {
+    @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+        font-family: 'Droid Arabic Kufi', serif;
+        border-collapse: collapse;
+        width: 98%;
+        margin: auto;
+    }
+}
