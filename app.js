@@ -35,8 +35,8 @@ $.getJSON("https://corona.lmao.ninja/v2/ALL", function (data) {
     $('.new_deaths').append(new_deaths);
 
 });
-
-$.getJSON("https://corona.lmao.ninja/v2/countries/", function (data) {
+//https://corona.lmao.ninja/v2/countries/
+$.getJSON("https://disease.sh/v3/covid-19/countries/", function (data) {
     console.log(data);
 
     let default_flag = "noFlag";
