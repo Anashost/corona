@@ -1,5 +1,5 @@
-$.getJSON("https://corona.lmao.ninja/v2/ALL", function (data) {
-
+$.getJSON("https://disease.sh/v3/covid-19/all", function (data) {
+// old url: https://corona.lmao.ninja/v2/ALL
     // get today date
     let d = new Date();
     let strDate = d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate();
