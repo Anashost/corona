@@ -45,6 +45,16 @@ $.getJSON("https://disease.sh/v3/covid-19/countries/", function (data) {
             data[i].countryInfo.iso2 = default_flag;
         }
 
+        let html_code =
+            '<tr>\n' +
+            '        <td><img class="flag-list" src="https://disease.sh/v3/covid-19/assets/img/flags/' + data[i].countryInfo.iso2.toLowerCase() + '.png">' + data[i].country + '</td>' +
+            '        <td>' + data[i].cases + '<p id="plus-cases" class="set-red">+ ' + data[i].todayCases + '</p></td>\n' +
+            '        <td>' + data[i].recovered + '</td>\n' +
+            '        <td>' + data[i].deaths + '<p class="set-red">+ ' + data[i].todayDeaths + '</p></td>\n' +
+            '    </tr>';
+
+        $(".table-data").append(html_code);
+
 
     }
 
