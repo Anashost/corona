@@ -1,4 +1,4 @@
-# corona
+# corona tracker
 link: 
 https://corona.great-site.net
 or
