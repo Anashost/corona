@@ -1,2 +1,5 @@
 # corona
-link: https://anashost.github.io/corona
+link: 
+https://corona.great-site.net
+or
+https://anashost.github.io/corona
